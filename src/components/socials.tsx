@@ -36,21 +36,7 @@ const SocialDetails: { title: string; icon: CustomIconType }[] = [
 ];
 
 const Socials = () => {
-  return (
-    <div className="grid grid-cols-2 gap-2">
-      {SocialDetails.map((stat) => (
-        <div
-          key={stat.title}
-          className="flex flex-col items-center justify-center bg-[#10172a] rounded-2xl py-6"
-        >
-          <span className="px-4 pt-1 pb-2 text-sm flex flex-col items-center">
-            {stat.icon({ color: "white", fontSize: 50 })}
-            <span className="pl-1">{stat.title}</span>
-          </span>
-        </div>
-      ))}
-    </div>
-  );
+  return <div className="grid grid-cols-2 gap-2"></div>;
 };
 
 export default Socials;
