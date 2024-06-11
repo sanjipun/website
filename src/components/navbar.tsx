@@ -5,11 +5,11 @@ export const Navbar = () => {
   return (
     <div className="max-w-screen-2xl w-full m-auto p-10">
       <nav className="flex justify-between items-center font-extrabold text-xl">
+        <Link to="#stacks" className="uppercase">
+          stacks
+        </Link>
         <Link to="#portfolio" className="uppercase">
           Portfolio
-        </Link>
-        <Link to="#stats" className="uppercase">
-          Stats
         </Link>
         <Link
           to="/"
