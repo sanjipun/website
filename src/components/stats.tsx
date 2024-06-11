@@ -40,7 +40,25 @@ const StatsDetails: { title: string; count: number; icon: CustomIconType }[] = [
 ];
 
 const Stats = () => {
-  return <div className="grid grid-cols-2 gap-2"></div>;
+  return (
+    <div className="max-w-screen-2xl w-full m-auto grid grid-cols-6 mt-10">
+      <div className="flex flex-col text-center border-r border-b border-black p-6">
+        <span className="text-6xl font-bold text-[#1A4D2E]">10+</span>
+        <span className="text-lg font-medium">Clients</span>
+      </div>
+      <div className="flex flex-col text-center border-r border-b border-black p-6">
+        <span className="text-6xl font-bold text-[#1A4D2E]">22+</span>
+        <span className="text-lg font-medium">Interns Mentored</span>
+      </div>
+      <div className="flex flex-col text-center border-r border-b border-black p-6">
+        <span className="text-6xl font-bold text-[#1A4D2E]">2+</span>
+        <span className="text-lg font-medium">Companies</span>
+      </div>
+      <div className="border-b border-black p-6"></div>
+      <div className="border-b border-black"></div>
+      <div className="border-b border-black"></div>
+    </div>
+  );
 };
 
 export default Stats;

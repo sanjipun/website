@@ -9,3 +9,7 @@ body {
   font-family: "Encode Sans", sans-serif;
   font-size: 14px;
 }
+
+.clip-path {
+  clip-path: polygon(100% 1%, 95% 53%, 100% 100%, 0% 100%, 5% 53%, 0% 0%);
+}

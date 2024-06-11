@@ -1,12 +1,16 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { Navbar } from "../components/navbar";
+import MainIntro from "../components/main-intro";
+import Stats from "../components/stats";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
       <Navbar />
-      <div className="grid grid-cols-12 grid-rows-10 gap-4 mt-4"></div>
+      <div className="border border-black"></div>
+      <MainIntro />
+      <Stats />
     </main>
   );
 };
