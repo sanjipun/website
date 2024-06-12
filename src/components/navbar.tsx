@@ -1,4 +1,5 @@
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
 export const Navbar = () => {
@@ -18,11 +19,17 @@ export const Navbar = () => {
           SANJI PUN
         </Link>
         <Link to="#about" className="uppercase">
-          About
+          timeline
         </Link>
-        <Link to="#socials" className="uppercase">
-          socials
-        </Link>
+        <a href="https://github.com/sanjipun" className="uppercase">
+          github{" "}
+          <StaticImage
+            src="../images/github.png"
+            alt="github freepik"
+            width={25}
+            height={25}
+          />
+        </a>
       </nav>
     </div>
   );
