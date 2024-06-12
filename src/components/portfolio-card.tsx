@@ -19,11 +19,11 @@ const PortfolioCard = ({
         image={getImage(projectImage) as IGatsbyImageData}
         alt={projectName}
       />
-      <div className="flex flex-col justify-center items-center pb-6">
+      <div className="flex flex-col justify-center items-center pb-6 px-4">
         <h1 className="text-[#1A4D2E] mt-4 font-semibold text-2xl uppercase">
           {projectName}
         </h1>
-        <p className="text-[#1A4D2E] text-center mt-4 text-lg px-2">
+        <p className="text-[#1A4D2E] font-medium text-center mt-4 text-lg px-2">
           {projectDetails}
         </p>
         <a href={link}>

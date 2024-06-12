@@ -35,7 +35,7 @@ const MainIntro = () => {
             </button>
           </Link>
         </div>
-        <div className="flex justify-end relative">
+        <div className="flex justify-end relative h-[530px]">
           <div className="p-4 bg-[#1A4D2E]">
             <StaticImage
               src="../images/computer.jpeg"
@@ -44,14 +44,15 @@ const MainIntro = () => {
               width={500}
               height={500}
             ></StaticImage>
-            <StaticImage
-              src="../images/browser.png"
-              alt="Icon by Assia Benkerroum freepik"
-              width={100}
-              height={100}
-              layout="fixed"
-              className="absolute right-0 top-0 rotate-45"
-            />
+            <div className="absolute right-0 top-0 rotate-45">
+              <StaticImage
+                src="../images/browser.png"
+                alt="Icon by Assia Benkerroum freepik"
+                width={100}
+                height={100}
+                layout="fixed"
+              />
+            </div>
           </div>
         </div>
       </div>
