@@ -30,12 +30,12 @@ const MainIntro = () => {
             </p>
           </div>
           <Link to="#contact">
-            <button className="mt-10 text-2xl px-6 py-4 bg-[#1A4D2E] rounded-md text-white shadow-[6px_6px_0px_0px_#101010]">
+            <button className="mt-10 text-2xl px-6 py-4 bg-[#1A4D2E] rounded-sm text-white shadow-[6px_6px_0px_0px_#101010]">
               CONTACT
             </button>
           </Link>
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-end relative">
           <div className="p-4 bg-[#1A4D2E]">
             <StaticImage
               src="../images/computer.jpeg"
@@ -44,6 +44,14 @@ const MainIntro = () => {
               width={500}
               height={500}
             ></StaticImage>
+            <StaticImage
+              src="../images/browser.png"
+              alt="Icon by Assia Benkerroum freepik"
+              width={100}
+              height={100}
+              layout="fixed"
+              className="absolute right-0 top-0 rotate-45"
+            />
           </div>
         </div>
       </div>
