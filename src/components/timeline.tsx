@@ -64,7 +64,7 @@ const Timeline = () => {
           <div className="absolute -top-10 -left-10 font-bold text-2xl fancy-border border border-black w-[75px] h-[75px] flex justify-center items-center bg-[#f5e5ce] text-[#1A4D2E]">
             <span>{timeline.year}</span>
           </div>
-          <div className="px-10 py-6 bg-[#1A4D2E] text-[#eee0c9] border border-black shadow-[8px_8px_0px_0px_#101010]">
+          <div className="rounded-md px-10 py-6 bg-[#1A4D2E] text-[#eee0c9] border border-black shadow-[8px_8px_0px_0px_#101010]">
             <h1 className="text-3xl font-bold pb-2">{timeline.company}</h1>
             {timeline.projects.map((project) => (
               <h3 key={project.name} className="text-xl mt-2 font-medium">

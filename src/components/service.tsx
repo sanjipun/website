@@ -14,7 +14,7 @@ const Service = () => {
         }) => (
           <div
             key={source.title}
-            className="h-[480px] bg-[#f5e5ce] max-w-xs w-full border border-black shadow-[8px_8px_0px_0px_#101010] p-6"
+            className="h-[480px] rounded-md bg-[#f5e5ce] max-w-xs w-full border border-black shadow-[8px_8px_0px_0px_#101010] p-6"
           >
             <div className="w-full flex justify-center items-center">
               <GatsbyImage
