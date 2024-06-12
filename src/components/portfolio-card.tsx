@@ -14,7 +14,7 @@ const PortfolioCard = ({
   projectImage: IGatsbyImageData;
 }) => {
   return (
-    <div className="max-w-md w-full mt-10 border border-black shadow-[8px_8px_0px_0px_#101010]">
+    <div className="h-[450px] bg-[#f5e5ce] max-w-md w-full mt-10 border border-black shadow-[8px_8px_0px_0px_#101010]">
       <GatsbyImage
         image={getImage(projectImage) as IGatsbyImageData}
         alt={projectName}

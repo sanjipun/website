@@ -32,7 +32,7 @@ const Portfolio = () => {
 export default Portfolio;
 
 const dataQuery = graphql`
-  query MyQuery {
+  query PortfolioQuery {
     allProjectArrJson {
       nodes {
         projectDetails
@@ -44,7 +44,7 @@ const dataQuery = graphql`
               layout: CONSTRAINED
               aspectRatio: 2
               transformOptions: { cropFocus: NORTH }
-              placeholder: TRACED_SVG
+              placeholder: BLURRED
             )
           }
         }
