@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Web Development",
+    "description": "Discover how you can create a website at just 40% of the market cost with our services. I specialize in cost-effective web development, ensuring you get a high-quality site without breaking the bank.",
+    "image": "../images/browser.png"
+  },
+  {
+    "title": "Search Engine Optimization",
+    "description": "As an SEO specialist, I can help improve your website’s Google ranking. Let’s work together to boost your online visibility and drive more organic traffic.",
+    "image": "../images/search.png"
+  },
+  {
+    "title": "Blockchain Integration",
+    "description": "I specialize in integrating blockchain projects into websites. Let’s seamlessly integrate Web3 projects with Polygon, Ethereum, and Binance Smart Chain using React.",
+    "image": "../images/blockchain.png"
+  },
+  {
+    "title": "Backend Or CMS Development",
+    "description": "I specialize in backend development, and I’m well-versed in using Django REST API. If you’re looking for a faster solution, I can also work with CMS like Strapi, Contentful, WordPress, and Forestry.",
+    "image": "../images/backend.png"
+  }
+]
