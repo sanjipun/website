@@ -1,0 +1,32 @@
+[
+  {
+    "projectName": "PYX.IS",
+    "projectDetails": "Pyxis is a chain-agnostic, multi-layer blockchain solution offering a simple, smart, and secure crypto wallet integrated with PyxelChain’s tools",
+    "link": "https://pyx.is",
+    "projectImage": "../images/pyxis.png"
+  },
+  {
+    "projectName": "Aarawan Tech",
+    "projectDetails": "Aarawan Tech is a digital solutions company that boosts growth for small and medium enterprises with tailored software, web development, and digital marketing.",
+    "link": "https://aarawantech.com/",
+    "projectImage": "../images/aarawan.png"
+  },
+  {
+    "projectName": "Classi Deals",
+    "projectDetails": "Classi Deals is an online marketplace offering exclusive local deals, with features like QR code shopping and gifts sent directly to recipients.",
+    "link": "https://classideals.com.au/",
+    "projectImage": "../images/classideals.png"
+  },
+  {
+    "projectName": "Contract Registry",
+    "projectDetails": "Contract Registry is a platform for deploying, managing, and auditing smart contracts, offering git branch-based synchronization and human-readable design frame",
+    "link": "https://contractregistry.io/",
+    "projectImage": "../images/contract.png"
+  },
+  {
+    "projectName": "pyxelchain",
+    "projectDetails": "PyxelChain Technology: A blockchain-focused company prioritizing user privacy, safe cryptocurrency practices, and secure solutions.",
+    "link": "https://pyxelchain.com/",
+    "projectImage": "../images/pyxelchain.png"
+  }
+]

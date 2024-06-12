@@ -13,3 +13,7 @@ body {
 .clip-path {
   clip-path: polygon(100% 1%, 95% 53%, 100% 100%, 0% 100%, 5% 53%, 0% 0%);
 }
+
+.fancy-border {
+  border-radius: 58% 42% 70% 30% / 30% 36% 64% 70%;
+}
