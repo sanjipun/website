@@ -1,10 +1,13 @@
-import { Link } from "gatsby";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
+import scrollTo from "gatsby-plugin-smoothscroll";
 import React from "react";
 
 const MainIntro = () => {
   return (
-    <div className="max-w-screen-2xl w-full m-auto p-6 md:p-10 mt-20 flex flex-col">
+    <div
+      id="top"
+      className="max-w-screen-2xl w-full m-auto p-6 md:p-10 mt-20 flex flex-col"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div>
           <div className="flex items-center">
@@ -25,15 +28,16 @@ const MainIntro = () => {
               <div className="rounded-full bg-black w-4 h-4 mr-2"></div>
               <div className="rounded-full bg-black w-4 h-4"></div>
             </div>
-            <p className="font-extrabold text-6xl xl:text-7xl text-[#1A4D2E]">
+            <p className="font-extrabold text-5xl xl:text-7xl text-[#1A4D2E]">
               Front-end developer bringing ideas to life with React.
             </p>
           </div>
-          <Link to="#contact">
-            <button className="mt-10 text-2xl px-6 py-4 bg-[#1A4D2E] rounded-sm text-white shadow-[6px_6px_0px_0px_#101010]">
-              CONTACT
-            </button>
-          </Link>
+          <button
+            onClick={() => scrollTo("#contact")}
+            className="mt-10 text-2xl px-6 py-4 bg-[#1A4D2E] rounded-sm text-white shadow-[6px_6px_0px_0px_#101010]"
+          >
+            Contact
+          </button>
         </div>
         <div className="flex justify-end relative lg:h-[530px] invisible lg:visible h-0">
           <div className="p-4 bg-[#1A4D2E]">

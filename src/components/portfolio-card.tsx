@@ -15,10 +15,12 @@ const PortfolioCard = ({
 }) => {
   return (
     <div className="h-[450px] rounded-md bg-[#f5e5ce] max-w-md w-full mt-10 border border-black shadow-[8px_8px_0px_0px_#101010]">
-      <GatsbyImage
-        image={getImage(projectImage) as IGatsbyImageData}
-        alt={projectName}
-      />
+      <div className="overflow-hidden">
+        <GatsbyImage
+          image={getImage(projectImage) as IGatsbyImageData}
+          alt={projectName}
+        />
+      </div>
       <div className="flex flex-col justify-center items-center pb-6 px-4">
         <h1 className="text-[#1A4D2E] mt-4 font-semibold text-2xl uppercase">
           {projectName}

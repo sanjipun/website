@@ -8,6 +8,7 @@ import Portfolio from "../components/portfolio";
 import Timeline from "../components/timeline";
 import Service from "../components/service";
 import Contact from "../components/contact";
+import CountCard from "../components/count-card";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -17,10 +18,22 @@ const IndexPage: React.FC<PageProps> = () => {
       <MainIntro />
       <Stats />
       <Stacks />
+      <div id="portfolio">
+        <CountCard title="Portfolio" count="01" />
+      </div>
       <Portfolio />
+      <div id="timeline">
+        <CountCard title="Timeline" count="02" />
+      </div>
       <Timeline />
+      <div id="services">
+        <CountCard title="Services" count="03" />
+      </div>
       <Service />
       <div className="border border-black" />
+      <div id="contact">
+        <CountCard title="Contact" count="04" />
+      </div>
       <Contact />
     </main>
   );

@@ -15,6 +15,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
+    `gatsby-plugin-smoothscroll`,
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
