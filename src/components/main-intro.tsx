@@ -4,11 +4,11 @@ import React from "react";
 
 const MainIntro = () => {
   return (
-    <div className="max-w-screen-2xl w-full m-auto p-10 mt-20 flex flex-col">
-      <div className="grid grid-cols-2">
+    <div className="max-w-screen-2xl w-full m-auto p-6 md:p-10 mt-20 flex flex-col">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
         <div>
           <div className="flex items-center">
-            <p className="font-medium text-2xl text-[#1A4D2E] opacity-80 mr-6">
+            <p className="font-medium text-md md:text-2xl text-[#1A4D2E] opacity-80 mr-6">
               Get your website made at fraction of cost.
             </p>
             <StaticImage
@@ -25,7 +25,7 @@ const MainIntro = () => {
               <div className="rounded-full bg-black w-4 h-4 mr-2"></div>
               <div className="rounded-full bg-black w-4 h-4"></div>
             </div>
-            <p className="font-extrabold text-7xl text-[#1A4D2E] leading-[80px]">
+            <p className="font-extrabold text-6xl xl:text-7xl text-[#1A4D2E]">
               Front-end developer bringing ideas to life with React.
             </p>
           </div>
@@ -35,7 +35,7 @@ const MainIntro = () => {
             </button>
           </Link>
         </div>
-        <div className="flex justify-end relative h-[530px]">
+        <div className="flex justify-end relative lg:h-[530px] invisible lg:visible h-0">
           <div className="p-4 bg-[#1A4D2E]">
             <StaticImage
               src="../images/computer.jpeg"

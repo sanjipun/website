@@ -5,7 +5,7 @@ import React from "react";
 const Service = () => {
   const servicesData = useStaticQuery(servicesQuery);
   return (
-    <div className="max-w-screen-2xl w-full m-auto p-10 mt-20 grid grid-cols-4 items-center justify-items-center">
+    <div className="max-w-screen-2xl w-full m-auto p-6 md:p-10 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center justify-items-center">
       {servicesData.allServicesArrJson.nodes.map(
         (source: {
           image: IGatsbyImageData;
@@ -14,12 +14,12 @@ const Service = () => {
         }) => (
           <div
             key={source.title}
-            className="h-[480px] rounded-md bg-[#f5e5ce] max-w-xs w-full border border-black shadow-[8px_8px_0px_0px_#101010] p-6"
+            className="h-[480px] w-full mt-6 xl:mt-0 rounded-md bg-[#f5e5ce] max-w-md md:max-w-sm border border-black shadow-[8px_8px_0px_0px_#101010] p-6"
           >
             <div className="w-full flex justify-center items-center">
               <GatsbyImage
                 image={getImage(source.image) as IGatsbyImageData}
-                alt="Web Dev"
+                alt={source.title}
               />
             </div>
             <h1 className="text-center font-bold text-2xl text-[#1A4D2E] uppercase">

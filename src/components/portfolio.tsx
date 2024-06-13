@@ -6,7 +6,7 @@ import { IGatsbyImageData } from "gatsby-plugin-image";
 const Portfolio = () => {
   const sourceData = useStaticQuery(dataQuery);
   return (
-    <div className="max-w-screen-2xl w-full m-auto my-10 p-6 grid grid-cols-3 items-center justify-items-center">
+    <div className="max-w-screen-2xl w-full m-auto my-10 p-6 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  items-center justify-items-center">
       {sourceData.allProjectArrJson.nodes.map(
         (project: {
           projectName: string;

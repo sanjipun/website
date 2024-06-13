@@ -41,7 +41,7 @@ const StatsDetails: { title: string; count: number; icon: CustomIconType }[] = [
 
 const Stats = () => {
   return (
-    <div className="max-w-screen-2xl w-full m-auto grid grid-cols-6 mt-10">
+    <div className="max-w-screen-2xl w-full m-auto grid grid-cols-3 lg:grid-cols-6 mt-10">
       <div className="flex flex-col text-center border-r border-b border-black p-6">
         <span className="text-6xl font-bold text-[#1A4D2E]">10+</span>
         <span className="text-lg font-medium">Clients</span>
