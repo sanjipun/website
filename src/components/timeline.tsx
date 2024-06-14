@@ -1,5 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
+import { isMobile } from "react-device-detect";
+import { useInView } from "react-intersection-observer";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -73,21 +75,16 @@ const TimelineArr: {
   },
 ];
 const Timeline = () => {
-  const controls = useAnimation();
-
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [controls, isInView]);
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: isMobile ? "80%" : "30%",
+  });
   return (
     <motion.div
       ref={ref}
       variants={container}
       initial="hidden"
-      animate={controls}
+      animate={inView && "visible"}
       className="max-w-6xl w-full m-auto p-10"
     >
       {TimelineArr.map((timeline) => (

@@ -1,7 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image";
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
+import { isMobile } from "react-device-detect";
+import { useInView } from "react-intersection-observer";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -24,8 +26,10 @@ const item = {
 };
 
 const Service = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: isMobile ? "80%" : "30%",
+  });
 
   const servicesData = useStaticQuery(servicesQuery);
   return (
@@ -33,7 +37,7 @@ const Service = () => {
       ref={ref}
       variants={container}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      animate={inView ? "visible" : "hidden"}
       className="max-w-screen-2xl w-full m-auto p-6 md:p-10 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center justify-items-center"
     >
       {servicesData.allServicesArrJson.nodes.map(

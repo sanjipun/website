@@ -1,8 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import PortfolioCard from "./portfolio-card";
 import { graphql, useStaticQuery } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { isMobile } from "react-device-detect";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -25,22 +27,17 @@ const item = {
 };
 
 const Portfolio = () => {
-  const controls = useAnimation();
-
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [controls, isInView]);
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: isMobile ? "80%" : "30%",
+  });
 
   const sourceData = useStaticQuery(dataQuery);
   return (
     <motion.div
       ref={ref}
       variants={container}
-      animate={controls}
+      animate={inView && "visible"}
       initial="hidden"
       className="max-w-screen-2xl w-full m-auto my-10 p-6 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  items-center justify-items-center"
     >
