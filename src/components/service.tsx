@@ -28,7 +28,7 @@ const item = {
 const Service = () => {
   const { ref, inView } = useInView({
     threshold: 0,
-    rootMargin: isMobile ? "80%" : "30%",
+    rootMargin: isMobile ? "80%" : "15%",
   });
 
   const servicesData = useStaticQuery(servicesQuery);

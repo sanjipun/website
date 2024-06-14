@@ -8,6 +8,7 @@ body {
   color: #101010;
   font-family: "Encode Sans", sans-serif;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 .clip-path {
