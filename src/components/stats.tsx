@@ -72,9 +72,9 @@ const Stats = () => {
       </div>
       <div className="flex flex-col text-center border-r border-b border-black p-6">
         <span className="text-6xl font-bold text-[#1A4D2E]">
-          <NumberCounter from={0} to={2} />
+          <NumberCounter from={0} to={5} />
         </span>
-        <span className="text-lg font-medium">Companies</span>
+        <span className="text-lg font-medium">Years of Experience</span>
       </div>
       <div className="border-b border-black p-6"></div>
       <div className="border-b border-black"></div>
