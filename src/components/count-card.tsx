@@ -6,7 +6,7 @@ const CountCard = ({ title, count }: { title: string; count: string }) => {
       <h1 className="text-6xl md:text-8xl absolute z-20 text-[#1A4D2E]">
         {title}
       </h1>
-      <h2 className="text-9xl md:text-[170px] absolute text-[#eee0c9] opacity-70 z-10 drop-shadow-[1.2px_1.2px_1.2px_rgba(0,0,0,0.8)]">
+      <h2 className="text-9xl md:text-[170px] absolute text-[#eee0c9] z-10">
         {count}
       </h2>
     </div>
