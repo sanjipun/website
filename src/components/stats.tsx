@@ -1,17 +1,24 @@
-import React, { useRef } from "react";
-import { animate } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
 function NumberCounter({ from, to }: { from: number; to: number }) {
   const nodeRef = useRef<HTMLParagraphElement>(null);
 
-  animate(from, to, {
-    duration: 1,
-    onUpdate(value: number) {
+  useEffect(() => {
+    let currentValue = from;
+    const step = (to - from) / 60; // Assuming 60 frames per second
+
+    const updateValue = () => {
       if (nodeRef.current) {
-        nodeRef.current.textContent = Math.round(value).toString() + "+";
+        currentValue += step;
+        nodeRef.current.textContent = Math.round(currentValue).toString() + "+";
+        if (currentValue < to) {
+          requestAnimationFrame(updateValue);
+        }
       }
-    },
-  });
+    };
+
+    requestAnimationFrame(updateValue);
+  }, [from, to]);
 
   return <p ref={nodeRef} />;
 }
