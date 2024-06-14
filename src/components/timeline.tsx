@@ -1,5 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 const TimelineArr: {
   year: string;
   company: string;
@@ -53,10 +73,29 @@ const TimelineArr: {
   },
 ];
 const Timeline = () => {
+  const controls = useAnimation();
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [controls, isInView]);
   return (
-    <div className="max-w-6xl w-full m-auto p-10">
+    <motion.div
+      ref={ref}
+      variants={container}
+      initial="hidden"
+      animate={controls}
+      className="max-w-6xl w-full m-auto p-10"
+    >
       {TimelineArr.map((timeline) => (
-        <div className="relative mt-14 min-w-[320px]" key={timeline.company}>
+        <motion.div
+          variants={item}
+          className="relative mt-14 min-w-[320px]"
+          key={timeline.company}
+        >
           <div className="absolute -top-10 -left-10 font-bold text-2xl fancy-border border border-black w-[75px] h-[75px] flex justify-center items-center bg-[#f5e5ce] text-[#1A4D2E]">
             <span>{timeline.year}</span>
           </div>
@@ -73,9 +112,9 @@ const Timeline = () => {
               </h3>
             ))}
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

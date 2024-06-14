@@ -4,7 +4,7 @@
 
 html,
 body {
-  background-color: #f5efe6;
+  background-color: #f5e5e6;
   color: #101010;
   font-family: "Encode Sans", sans-serif;
   font-size: 14px;
@@ -16,4 +16,8 @@ body {
 
 .fancy-border {
   border-radius: 58% 42% 70% 30% / 30% 36% 64% 70%;
+}
+
+.fancy-border-hero {
+  border-radius: 21% 79% 69% 31% / 47% 77% 23% 53%;
 }

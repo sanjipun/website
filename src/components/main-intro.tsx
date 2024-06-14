@@ -1,8 +1,16 @@
 import { StaticImage } from "gatsby-plugin-image";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import React from "react";
+import { motion } from "framer-motion";
 
 const MainIntro = () => {
+  const generateRandomTop = () => {
+    return Math.floor(Math.random() * (450 - 0)) + 0;
+  };
+  const generateRandomLeft = () => {
+    return Math.floor(Math.random() * (600 - 50)) + 50;
+  };
+
   return (
     <div
       id="top"
@@ -40,15 +48,37 @@ const MainIntro = () => {
           </button>
         </div>
         <div className="flex justify-end relative lg:h-[530px] invisible lg:visible h-0">
-          <div className="p-4 bg-[#1A4D2E]">
-            <StaticImage
+          <div className="p-4 fancy-border-hero border border-black bg-[#f5e5ce] w-full ml-20">
+            {/* <StaticImage
               src="../images/computer.jpeg"
               alt="retro computer designed by Freepik"
               layout="fixed"
               width={500}
               height={500}
-            ></StaticImage>
-            <div className="absolute right-0 top-0 rotate-45">
+            ></StaticImage> */}
+            <motion.div
+              className="absolute z-10 m-10"
+              whileHover={{ scale: [null, 1.5, 1.4] }}
+              animate={{
+                top: generateRandomTop(),
+                left: generateRandomLeft(),
+                scale: [0.8, 1, 1, 0.8, 0.8],
+                rotate: [0, 0, 180, 180, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              // style={{
+              //   top: `${generateRandomTop()}px`,
+              //   left: `${generateRandomLeft()}px`,
+              // }}
+              initial={{ top: generateRandomTop(), left: generateRandomLeft() }}
+            >
               <StaticImage
                 src="../images/browser.png"
                 alt="Icon by Assia Benkerroum freepik"
@@ -56,7 +86,255 @@ const MainIntro = () => {
                 height={100}
                 layout="fixed"
               />
-            </div>
+            </motion.div>
+            <motion.div
+              className="absolute z-10 m-10"
+              whileHover={{ scale: [null, 1.5, 1.4] }}
+              animate={{
+                top: generateRandomTop(),
+                left: generateRandomLeft(),
+                scale: [0.8, 1, 1, 0.8, 0.8],
+                rotate: [0, 0, 180, 180, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              // style={{
+              //   top: `${generateRandomTop()}px`,
+              //   left: `${generateRandomLeft()}px`,
+              // }}
+              initial={{ top: generateRandomTop(), left: generateRandomLeft() }}
+            >
+              <StaticImage
+                src="../images/backend.png"
+                alt="Icon by Assia Benkerroum freepik"
+                width={100}
+                height={100}
+                layout="fixed"
+              />
+            </motion.div>
+            <motion.div
+              className="absolute z-10 m-10"
+              whileHover={{ scale: [null, 1.5, 1.4] }}
+              animate={{
+                top: generateRandomTop(),
+                left: generateRandomLeft(),
+                scale: [0.8, 1, 1, 0.8, 0.8],
+                rotate: [0, 0, 180, 180, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              // style={{
+              //   top: `${generateRandomTop()}px`,
+              //   left: `${generateRandomLeft()}px`,
+              // }}
+              initial={{ top: generateRandomTop(), left: generateRandomLeft() }}
+            >
+              <StaticImage
+                src="../images/games.png"
+                alt="Icon by Assia Benkerroum freepik"
+                width={100}
+                height={100}
+                layout="fixed"
+              />
+            </motion.div>
+            <motion.div
+              className="absolute z-10 m-10"
+              whileHover={{ scale: [null, 1.5, 1.4] }}
+              animate={{
+                top: generateRandomTop(),
+                left: generateRandomLeft(),
+                scale: [0.8, 1, 1, 0.8, 0.8],
+                rotate: [0, 0, 180, 180, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              // style={{
+              //   top: `${generateRandomTop()}px`,
+              //   left: `${generateRandomLeft()}px`,
+              // }}
+              initial={{ top: generateRandomTop(), left: generateRandomLeft() }}
+            >
+              <StaticImage
+                src="../images/globe.png"
+                alt="Icon by Assia Benkerroum freepik"
+                width={100}
+                height={100}
+                layout="fixed"
+              />
+            </motion.div>
+            <motion.div
+              className="absolute z-10 m-10"
+              whileHover={{ scale: [null, 1.5, 1.4] }}
+              animate={{
+                top: generateRandomTop(),
+                left: generateRandomLeft(),
+                scale: [0.8, 1, 1, 0.8, 0.8],
+                rotate: [0, 0, 180, 180, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              // style={{
+              //   top: `${generateRandomTop()}px`,
+              //   left: `${generateRandomLeft()}px`,
+              // }}
+              initial={{ top: generateRandomTop(), left: generateRandomLeft() }}
+            >
+              <StaticImage
+                src="../images/mail.png"
+                alt="Icon by Assia Benkerroum freepik"
+                width={100}
+                height={100}
+                layout="fixed"
+              />
+            </motion.div>
+            <motion.div
+              className="absolute z-10 m-10"
+              whileHover={{ scale: [null, 1.5, 1.4] }}
+              animate={{
+                top: generateRandomTop(),
+                left: generateRandomLeft(),
+                scale: [0.8, 1, 1, 0.8, 0.8],
+                rotate: [0, 0, 180, 180, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              // style={{
+              //   top: `${generateRandomTop()}px`,
+              //   left: `${generateRandomLeft()}px`,
+              // }}
+              initial={{ top: generateRandomTop(), left: generateRandomLeft() }}
+            >
+              <StaticImage
+                src="../images/message.png"
+                alt="Icon by Assia Benkerroum freepik"
+                width={100}
+                height={100}
+                layout="fixed"
+              />
+            </motion.div>
+            <motion.div
+              className="absolute z-10 m-10"
+              whileHover={{ scale: [null, 1.5, 1.4] }}
+              animate={{
+                top: generateRandomTop(),
+                left: generateRandomLeft(),
+                scale: [0.8, 1, 1, 0.8, 0.8],
+                rotate: [0, 0, 180, 180, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              // style={{
+              //   top: `${generateRandomTop()}px`,
+              //   left: `${generateRandomLeft()}px`,
+              // }}
+              initial={{ top: generateRandomTop(), left: generateRandomLeft() }}
+            >
+              <StaticImage
+                src="../images/search.png"
+                alt="Icon by Assia Benkerroum freepik"
+                width={100}
+                height={100}
+                layout="fixed"
+              />
+            </motion.div>
+            <motion.div
+              className="absolute z-10 m-10"
+              whileHover={{ scale: [null, 1.5, 1.4] }}
+              animate={{
+                top: generateRandomTop(),
+                left: generateRandomLeft(),
+                scale: [0.8, 1, 1, 0.8, 0.8],
+                rotate: [0, 0, 180, 180, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              // style={{
+              //   top: `${generateRandomTop()}px`,
+              //   left: `${generateRandomLeft()}px`,
+              // }}
+              initial={{ top: generateRandomTop(), left: generateRandomLeft() }}
+            >
+              <StaticImage
+                src="../images/blockchain.png"
+                alt="Icon by Assia Benkerroum freepik"
+                width={100}
+                height={100}
+                layout="fixed"
+              />
+            </motion.div>
+            <motion.div
+              className="absolute z-10 m-10"
+              whileHover={{ scale: [null, 1.5, 1.4] }}
+              animate={{
+                top: generateRandomTop(),
+                left: generateRandomLeft(),
+                scale: [0.8, 1, 1, 0.8, 0.8],
+                rotate: [0, 0, 180, 180, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              // style={{
+              //   top: `${generateRandomTop()}px`,
+              //   left: `${generateRandomLeft()}px`,
+              // }}
+              initial={{ top: generateRandomTop(), left: generateRandomLeft() }}
+            >
+              <StaticImage
+                src="../images/github.png"
+                alt="Icon by Assia Benkerroum freepik"
+                width={100}
+                height={100}
+                layout="fixed"
+              />
+            </motion.div>
           </div>
         </div>
       </div>

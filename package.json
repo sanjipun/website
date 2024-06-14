@@ -20,6 +20,7 @@
     "@react-icons/all-files": "^4.1.0",
     "@types/react-icons": "^3.0.0",
     "autoprefixer": "^10.4.19",
+    "framer-motion": "^11.2.10",
     "gatsby": "^5.13.5",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^3.13.1",
