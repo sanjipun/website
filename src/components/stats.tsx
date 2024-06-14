@@ -45,7 +45,7 @@ function NumberCounter({ from, to }: { from: number; to: number }) {
 
   animate(from, to, {
     duration: 1,
-    onUpdate(value) {
+    onUpdate(value: number) {
       if (nodeRef.current) {
         nodeRef.current.textContent = Math.round(value).toString() + "+";
       }

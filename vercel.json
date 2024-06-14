@@ -1,0 +1,8 @@
+{
+  "builds": [
+    {
+      "src": "gatsby-config.js",
+      "use": "@vercel/webpack"
+    }
+  ]
+}
