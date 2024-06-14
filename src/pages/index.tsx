@@ -13,6 +13,19 @@ import CountCard from "../components/count-card";
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
+      <div className=" bg-blue-100 text-center">
+        Inspiration taken from{" "}
+        <a
+          className="bg-red-100"
+          href="https://dribbble.com/shots/24326538-Finance-landing-page-Retro-theme"
+        >
+          dribble
+        </a>{" "}
+        and most of the assets are taken from{" "}
+        <a className="bg-red-100" href="https://www.freepik.com/">
+          freep!k.
+        </a>
+      </div>
       <Navbar />
       <div className="border border-black" />
       <MainIntro />
