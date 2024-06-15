@@ -19,7 +19,7 @@ const IndexPage: React.FC<PageProps> = () => {
           className="bg-red-100"
           href="https://dribbble.com/shots/24326538-Finance-landing-page-Retro-theme"
         >
-          dribble
+          dribble,
         </a>{" "}
         and most of the assets are taken from{" "}
         <a className="bg-red-100" href="https://www.freepik.com/">
