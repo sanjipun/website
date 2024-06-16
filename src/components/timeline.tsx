@@ -84,7 +84,7 @@ const Timeline = () => {
       ref={ref}
       variants={container}
       initial="hidden"
-      animate={inView && "visible"}
+      animate={inView ? "visible" : "hidden"}
       className="max-w-6xl w-full m-auto p-10"
     >
       {TimelineArr.map((timeline) => (

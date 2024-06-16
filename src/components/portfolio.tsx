@@ -37,7 +37,7 @@ const Portfolio = () => {
     <motion.div
       ref={ref}
       variants={container}
-      animate={inView && "visible"}
+      animate={inView ? "visible" : "hidden"}
       initial="hidden"
       className="max-w-screen-2xl w-full m-auto my-10 p-6 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  items-center justify-items-center"
     >
